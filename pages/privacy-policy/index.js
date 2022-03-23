@@ -51,8 +51,9 @@ function Privacy({websiteInformations}) {
           <div  className="px-6 py-12 md:px-12">
             <h2  className="text-2xl font-bold mb-4">Read the following carefully</h2>
            
-            <p  className="text-gray-500 mb-6 leading-tight">
-            <ReactMarkdown children={websiteInformations[0]?.privacyPolicy?.markdown} />
+            <p  className="text-gray-500 mb-6 leading-tight prose">
+              
+            <ReactMarkdown>{websiteInformations[0]?.privacyPolicy?.markdown}</ReactMarkdown>
             </p>
           </div>
         </div>

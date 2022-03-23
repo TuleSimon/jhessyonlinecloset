@@ -68,7 +68,7 @@ function Products({floor}) {
         <p className="text-sm font-black my-2 text-gray-500 text-left"> 
         Delivery within Nigeria </p>
         <p className="text-md text-left mb-2"> 
-        <ReactMarkdown/>{productDescription?.markdown}</p>
+        <ReactMarkdown>{productDescription?.markdown} </ReactMarkdown></p>
         <div className='flex flex-row gap-6'> 
             <p className="flex flex-row place-items-center gap-2 text-primary"> <FaMoneyBill/> 
             {Math.floor(4 + (Math.random() * (300 - 4)))} Sales</p>

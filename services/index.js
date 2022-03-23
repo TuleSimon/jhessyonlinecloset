@@ -46,18 +46,22 @@ export const getWebsiteDetails = graphcms.request(
       businessAddress
       aboutUs {
         markdown
+        text
       }
       contactUs {
         markdown
+        text
       }
       facebookhandle
       phoneNumber
       instagramHandle
       privacyPolicy {
         markdown
+        text
       }
       termsAndConditions {
         markdown
+        text
       }
       twitterHandle
       whatsappNumber
