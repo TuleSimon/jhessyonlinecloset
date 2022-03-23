@@ -8,18 +8,21 @@ import { HiShoppingCart } from 'react-icons/hi'
 import { BigButton, BreadCrumb, HorizontalDivider } from '../../../components'
 import BigButtonFill from '../../../components/buttons/BigButtonFill'
 import { getFloor, getFloors, getWebsiteDetails } from '../../../services'
+import { useRouter } from 'next/router'
 
 function Products({floor}) {
  
-
     const myRef = useRef()
+    const router = useRouter()
+ 
     useEffect(() => {
       myRef.current.scrollIntoView({ behavior: 'smooth' })
-    
+    if(floor==undefined || floor.slug==undefined)
+    router.push('/404')
     }, [])
-    
 
-    const {productDescription,categories, name,price,rating,slug, images} = floor;
+    const {productDescription,categories, name,price,rating,slug, images} = floor?floor:{};
+  
     const routes =  [{"title":"Home", "href":"/","Iconn":AiFillHome},
     { "title":"Products", "href":"/shop/products","Iconn":HiShoppingCart},
     { "title":slug, "href":`/shop/products/${slug}`,"Iconn":HiShoppingCart}]
@@ -65,14 +68,14 @@ function Products({floor}) {
         <p className="text-sm font-black my-2 text-gray-500 text-left"> 
         Delivery within Nigeria </p>
         <p className="text-md text-left mb-2"> 
-        <ReactMarkdown children={productDescription?.markdown} /></p>
+        <ReactMarkdown/>{productDescription?.markdown}</p>
         <div className='flex flex-row gap-6'> 
             <p className="flex flex-row place-items-center gap-2 text-primary"> <FaMoneyBill/> 
             {Math.floor(4 + (Math.random() * (300 - 4)))} Sales</p>
             <p className="flex flex-row place-items-center gap-2 text-green-400"> <FaLightbulb/> In Stock</p>
         </div>
         <p className="flex flex-row place-items-center gap-2 text-primary my-2 text-textcolor" > 
-        <span className="font-bold text-lg ">Category: </span>{categories[0].name}
+        <span className="font-bold text-lg ">Category: </span>{categories?categories[0].name:""}
         </p>
         <div className='flex flex-col gap-2'> 
         <a className="w-full grow flex" href={`https://wa.me/${websiteInformation?.phoneNumber}?text=I would like to place an order for ${name}`}>
@@ -88,7 +91,7 @@ function Products({floor}) {
        <HorizontalDivider style="mb-2"/>
 
        <div className='grid grid-cols-4 grid-rows-1 w-full gap-2'> 
-       {images.map((image) => (
+       {images?.map((image) => (
            <div className="relative" key={image.url}   onClick={e=> setImgurl(image.url)}>
             <img src={image.url} 
             className="w-32 shadow-lg rounded hover:scale-105 transition-all ease-in-out 

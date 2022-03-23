@@ -2,9 +2,7 @@
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  images: {
-    domains: ['media.graphcms.com'],
-  },
+  
 
   content: ["./src/**/*.{html,js}",
   './pages/**/*.{js,ts,jsx,tsx}','./node_modules/tw-elements/dist/js/**/*.js',

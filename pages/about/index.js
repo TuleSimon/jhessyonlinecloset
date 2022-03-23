@@ -6,7 +6,7 @@ import ReactMarkdown from 'react-markdown'
 import { getWebsiteDetails } from '../../services'
 import Head from 'next/head'
 
-function index({websiteInformations}) {  
+function About({websiteInformations}) {  
   const myRef = useRef()
   useEffect(() => {
     myRef.current.scrollIntoView({ behavior: 'smooth' })
@@ -53,7 +53,7 @@ function index({websiteInformations}) {
           <div  className="px-6 py-12 md:px-12">
  
           <p  className="text-gray-500 mb-6">
-        <ReactMarkdown children={websiteInformations[0]?.aboutUs?.markdown} />
+        <ReactMarkdown> {websiteInformations[0]?.aboutUs?.markdown} </ReactMarkdown>
         </p>
           </div>
         </div>
@@ -68,7 +68,7 @@ function index({websiteInformations}) {
   )
 }
 
-export default index
+export default About
 
 export async function getStaticProps(){
   const {websiteInformations} = await getWebsiteDetails;

@@ -5,16 +5,23 @@ import { AiFillHome } from 'react-icons/ai'
 import { BiCategory } from 'react-icons/bi'
 import { BreadCrumb,HorizontalDivider,MasonryLayout,Search, Select, Sort } from '../../components'
 import { getCategories, getCategory, getFloorsByCategory } from '../../services'
+import { useRouter } from 'next/router'
 
 function Category({categorys,products}) {  
 
   const myRef = useRef()
+  const router = useRouter()
+
   useEffect(() => {
     myRef.current.scrollIntoView({ behavior: 'smooth' })
-  
+    if(categorys==undefined || categorys.slug==undefined){
+      router.push('/404')
+  }
   }, [])
+
   
-  const {id,  image,  name, slug, description} = categorys
+  
+  const {id,  image,  name, slug, description} = categorys?categorys:{}
   const [floorss, setFloors] = useState(products);
   const [search, setSearch] = useState("")
   const [page, setPage] = useState(1)
@@ -49,7 +56,7 @@ function Category({categorys,products}) {
         <div
   className="p-12 w-full text-center relative overflow-hidden bg-no-repeat bg-cover h-96 rounded-lg" ref={myRef}
 >
-  <img src={image.url} width="100%" className="object-cover absolute top-0 left-0 right-0 w-full " />
+  <img src={image?.url} width="100%" className="object-cover absolute top-0 left-0 right-0 w-full " />
   <div
      className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed shop_overlay"
   >
@@ -64,7 +71,8 @@ function Category({categorys,products}) {
   <Sort search={search} setSearch={setSearch}  setFloors={setFloors} category="true" slug={slug}/>
 <h1 className='text-xl font-bold uppercase mt-2'>OUR PRODUCTS</h1>
 <HorizontalDivider style="mb-4 place-self-center w-full grow"/>
-<MasonryLayout page={page} setPage={setPage} count={floorss?.productsConnection?.aggregate?.count} floors={floorss?.productsConnection?.edges} />
+<MasonryLayout page={page} setPage={setPage} 
+count={floorss?.productsConnection?.aggregate?.count} floors={floorss?floorss.productsConnection?.edges:{}} />
 
 </div>
   )

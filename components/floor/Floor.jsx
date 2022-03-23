@@ -33,7 +33,7 @@ const Floor = ({ floor }) => {
         <p className="text-lg font-black my-2"> ₦{price} </p>
         <HorizontalDivider style="mb-2"/>
         <p className="text-sm font-black my-2 text-gray-500 text-left line-clamp-5 text-ellipsis whitespace-pre-line"> 
-        <ReactMarkdown children={productDescription?.markdown} /></p>
+        <ReactMarkdown>{productDescription?.markdown}</ReactMarkdown> </p>
         <div className="flex flex-col md:flex-row gap-2 place-items-center place-content-between w-full">
         <Rating name="read-only" value={rating} readOnly size="small" />
         <BigButton> <FaWhatsapp/> ORDER ON WHATSAPP </BigButton>

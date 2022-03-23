@@ -5,7 +5,7 @@ import { BreadCrumb} from '../../components'
 import ReactMarkdown from 'react-markdown'
 import { getWebsiteDetails } from '../../services'
 
-function index({websiteInformations}) {  
+function Terms({websiteInformations}) {  
 
     const routes =  [{"title":"Home", "href":"/","Iconn":AiFillHome},
     { "title":"Terms and Condition", "href":"/terms-condition","Iconn":AiFillInfoCircle}]
@@ -53,9 +53,8 @@ function index({websiteInformations}) {
             <h2  className="text-2xl font-bold mb-4">OUR TERMS AND CONDITIONS</h2>
         
             <p  className="text-gray-500 mb-6 leading-tight">
-            <ReactMarkdown children={websiteInformations[0]?.termsAndConditions?.markdown} />
+            <ReactMarkdown>{websiteInformations[0]?.termsAndConditions?.markdown} </ReactMarkdown>
             </p>
-          
           </div>
         </div>
       </div>
@@ -69,7 +68,7 @@ function index({websiteInformations}) {
   )
 }
 
-export default index
+export default Terms
 
 export async function getStaticProps(){
   const {websiteInformations} = await getWebsiteDetails;

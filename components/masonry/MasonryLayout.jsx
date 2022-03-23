@@ -22,7 +22,8 @@ const MasonryLayout = ({ floors,count, page,setPage }) => {
   };
 
   const Render = () =>{
-    if(floors.length >0){
+    if(floors){
+    if(floors?.length >0){
     return <><Masonry className="flex w-full animate-slide-fwd" breakpointCols={breakpointColumnsObj}>
    {floors?.map(({cursor,node}) => <Floor key={cursor} floor={node} className="w-max" />)}
   </Masonry>
@@ -30,8 +31,12 @@ const MasonryLayout = ({ floors,count, page,setPage }) => {
   </>
   }
   else{
-    <h1 className='flex gap-2 text-xl text-primary font-bold'> <MdHourglassEmpty/> SORRY WE ARE EMPTY</h1>
+    return <h1 className='flex gap-2 text-xl text-primary font-bold'> <MdHourglassEmpty/> SORRY WE ARE EMPTY</h1>
   }
+}
+else{
+  return <h1 className='flex gap-2 text-xl text-primary font-bold'> <MdHourglassEmpty/> SORRY WE ARE EMPTY</h1>
+}
   }
 
   return  <Render/>

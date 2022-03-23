@@ -12,7 +12,6 @@ function Footer() {
     const {websiteInformations} = await getWebsiteDetails;
     setInfo(websiteInformations[0])
     const {categories} = await getCategories2();
-    console.log(categories)
     setCategories(categories)
   }
 

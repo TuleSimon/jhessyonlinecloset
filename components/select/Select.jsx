@@ -31,7 +31,7 @@ function Select({options, styles, setState}) {
       focus:text-gray-700 focus:bg-white focus:border-primary focus:outline-none" aria-label="Default select example">
         <option selected>{options.title}</option>
         {options.values.map((option) => (
-            <option value={option.value} onClick={e=> changeState(option.value)}>{option.title}</option>
+            <option value={option.value} key={option.value} onClick={e=> changeState(option.value)}>{option.title}</option>
         ))}
     </select>
   </div>

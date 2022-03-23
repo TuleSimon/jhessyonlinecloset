@@ -33,7 +33,7 @@ function Select2({options, styles, setState}) {
         <option value={null}
              onClick={e=> changeState(null)} className="truncate text-sm">All</option>
         {options?.map((option) => (
-            <option value={option.slug}
+            <option value={option.slug} key={option.slug}
              onClick={e=> changeState(option.slug)} className="truncate text-sm">{option.name.toUpperCase()}</option>
         ))}
     </select>

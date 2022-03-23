@@ -11,7 +11,7 @@ import {
 } from "../../components";
 import {  getFloorsBy } from "../../services";
 
-function index({ floors }) {
+function Shop({ floors }) {
   const myRef = useRef();
   useEffect(() => {
     myRef.current.scrollIntoView({ behavior: "smooth" });
@@ -73,7 +73,7 @@ function index({ floors }) {
   );
 }
 
-export default index;
+export default Shop;
 
 export async function getStaticProps() {
   const floors = await getFloorsBy("name_ASC","",1);

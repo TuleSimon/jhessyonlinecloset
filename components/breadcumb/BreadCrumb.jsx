@@ -17,9 +17,9 @@ function BreadCrumb({routes}) {
     <nav className="relative w-full flex flex-row  overflow-hidden   items-center
      justify-between py-3 bg-gray-100 text-gray-500 
     hover:text-gray-700 focus:text-gray-700 shadow-lg navbar navbar-expand-lg navbar-light">
-  <div className="container-fluid w-full  flex flex-row gap-2 px-6">
-    <nav className="bg-grey-light rounded-md w-full flex flex-wrap  justify-between" aria-label="breadcrumb">
-      <ol className="list-reset flex place-items-center flex-row flex-wrap">
+  <div className="container-fluid w-full  grid grid-cols-6 gap-2 px-2 md:px-6">
+    <nav className="bg-grey-light col-span-5 rounded-md flex flex-wrap justify-between" aria-label="breadcrumb">
+      <ol className="list-reset flex place-items-center flex-row flex-wrap w-full">
           {routes.map((data,index) => (  
               <>
             <li key={index}> <Links href={data.href} title={data.title} Iconn={data.Iconn}/></li>
@@ -28,7 +28,8 @@ function BreadCrumb({routes}) {
           ))}
       </ol>
     </nav>
-    <p className='text-2xl font-bold text-primary cursor-pointer h-fit bg-white rounded-full p-2 hover:bg-primary 
+    <p className='text-2xl font-bold text-primary cursor-pointer h-fit bg-white flex place-content-center place-items-center
+     rounded-full p-2 hover:bg-primary 
     hover:text-white shadow-xl md:hidden' onClick={toggleNav}>
     {toggle?<AiOutlineClose/>: <HiMenuAlt3/>}
     </p>

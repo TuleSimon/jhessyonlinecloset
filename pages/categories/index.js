@@ -6,7 +6,7 @@ import { BreadCrumb, HorizontalDivider} from '../../components'
 import CategoriesCard from '../../components/category/CategoriesCard'
 import { getCategories } from '../../services'
 
-function index({categories}) {  
+function Categories({categories}) {  
 
     const routes =  [{"title":"Home", "href":"/","Iconn":AiFillHome},
     { "title":"Category", "href":"/categories","Iconn":BiCategory}]
@@ -15,7 +15,6 @@ function index({categories}) {
     const myRef = useRef()
 useEffect(() => {
   myRef.current.scrollIntoView({ behavior: 'smooth' })
-
 }, [])
 
 
@@ -63,7 +62,7 @@ useEffect(() => {
   )
 }
 
-export default index
+export default Categories
 
 export async function getStaticProps(){
   const {categories} = await getCategories();
