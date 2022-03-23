@@ -52,7 +52,7 @@ function Privacy({websiteInformations}) {
             <h2  className="text-2xl font-bold mb-4">Read the following carefully</h2>
            
             <p  className="text-gray-500 mb-6 leading-tight">
-            <ReactMarkdown>{websiteInformations[0]?.privacyPolicy?.markdown} </ReactMarkdown>
+            <ReactMarkdown children={websiteInformations[0]?.privacyPolicy?.markdown} />
             </p>
           </div>
         </div>

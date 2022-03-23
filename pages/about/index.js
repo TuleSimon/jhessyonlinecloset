@@ -53,7 +53,7 @@ function About({websiteInformations}) {
           <div  className="px-6 py-12 md:px-12">
  
           <p  className="text-gray-500 mb-6">
-        <ReactMarkdown> {websiteInformations[0]?.aboutUs?.markdown} </ReactMarkdown>
+        <ReactMarkdown children={websiteInformations[0]?.aboutUs?.markdown}/>
         </p>
           </div>
         </div>

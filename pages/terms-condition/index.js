@@ -53,7 +53,7 @@ function Terms({websiteInformations}) {
             <h2  className="text-2xl font-bold mb-4">OUR TERMS AND CONDITIONS</h2>
         
             <p  className="text-gray-500 mb-6 leading-tight">
-            <ReactMarkdown>{websiteInformations[0]?.termsAndConditions?.markdown} </ReactMarkdown>
+            <ReactMarkdown children={websiteInformations[0]?.termsAndConditions?.markdown} />
             </p>
           </div>
         </div>
