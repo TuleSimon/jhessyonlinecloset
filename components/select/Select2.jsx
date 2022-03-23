@@ -9,8 +9,8 @@ function Select2({options, styles, setState}) {
   return (
     
         <div className={`flex justify-center w-full md:w-fit ${styles && "col-span-2 w-full grow"}`}>
-  <div class="mb-3 w-full">
-    <select onChange={e=> changeState(e.target.value)} class="form-select appearance-none
+  <div  className="mb-3 w-full">
+    <select onChange={e=> changeState(e.target.value)}  className="form-select appearance-none
       block
       w-full
       md:px-6

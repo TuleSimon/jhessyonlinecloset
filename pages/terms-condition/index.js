@@ -33,26 +33,26 @@ function index({websiteInformations}) {
   className="p-12 w-full text-center relative overflow-hidden bg-no-repeat bg-cover rounded-lg terms-condition_header" ref={myRef}
 >
   <div
-    class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed terms-condition_header"
+     className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed terms-condition_header"
   >
-    <div class="flex justify-center items-center h-full">
-      <div class="text-white">
-        <h2 class="font-black text-6xl mb-4">TERMS AND CONDITIONS</h2>
-        <h4 class="font-semibold text-xl mb-6">Things you need to know</h4>
+    <div  className="flex justify-center items-center h-full">
+      <div  className="text-white">
+        <h2  className="font-black text-6xl mb-4">TERMS AND CONDITIONS</h2>
+        <h4  className="font-semibold text-xl mb-6">Things you need to know</h4>
       </div>
     </div>
   </div>
 </div>
 
 
-<section class="mb-32 text-gray-800">
-    <div class="block">
-      <div class="flex flex-wrap items-center">
-        <div class="grow-0 shrink-0 basis-auto w-full">
-          <div class="px-6 py-12 md:px-12">
-            <h2 class="text-2xl font-bold mb-4">OUR TERMS AND CONDITIONS</h2>
+<section  className="mb-32 text-gray-800">
+    <div  className="block">
+      <div  className="flex flex-wrap items-center">
+        <div  className="grow-0 shrink-0 basis-auto w-full">
+          <div  className="px-6 py-12 md:px-12">
+            <h2  className="text-2xl font-bold mb-4">OUR TERMS AND CONDITIONS</h2>
         
-            <p class="text-gray-500 mb-6 leading-tight">
+            <p  className="text-gray-500 mb-6 leading-tight">
             <ReactMarkdown children={websiteInformations[0]?.termsAndConditions?.markdown} />
             </p>
           

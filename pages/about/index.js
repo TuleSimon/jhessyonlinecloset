@@ -34,25 +34,25 @@ function index({websiteInformations}) {
   className="p-12 w-full text-center relative overflow-hidden bg-no-repeat bg-cover rounded-lg aboutus_header" ref={myRef}
 >
   <div
-    class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed shop_overlay"
+     className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed shop_overlay"
   >
-    <div class="flex justify-center items-center h-full">
-      <div class="text-white">
-        <h2 class="font-black text-6xl mb-4">ABOUT US</h2>
-        <h4 class="font-semibold text-xl mb-6">WASHINGTON INTERIO CROWN LLC</h4>
+    <div  className="flex justify-center items-center h-full">
+      <div  className="text-white">
+        <h2  className="font-black text-6xl mb-4">ABOUT US</h2>
+        <h4  className="font-semibold text-xl mb-6">WASHINGTON INTERIO CROWN LLC</h4>
       </div>
     </div>
   </div>
 </div>
 
 
-<section class="mb-32 text-gray-800">
-    <div class="block">
-      <div class="flex flex-wrap items-center">
-        <div class="grow-0 shrink-0 basis-auto w-full">
-          <div class="px-6 py-12 md:px-12">
+<section  className="mb-32 text-gray-800">
+    <div  className="block">
+      <div  className="flex flex-wrap items-center">
+        <div  className="grow-0 shrink-0 basis-auto w-full">
+          <div  className="px-6 py-12 md:px-12">
  
-          <p class="text-gray-500 mb-6">
+          <p  className="text-gray-500 mb-6">
         <ReactMarkdown children={websiteInformations[0]?.aboutUs?.markdown} />
         </p>
           </div>

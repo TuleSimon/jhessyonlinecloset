@@ -27,24 +27,24 @@ function index({websiteInformations}) {
         <meta property="og:title" content="CONTACT US" key="title" />
       </Head>
           <BreadCrumb routes={routes}/>
-<div class="container my-24 px-6 mx-auto" ref={myRef}>
+<div  className="container my-24 px-6 mx-auto" ref={myRef}>
 
-  <section class="mb-32 text-gray-800">
-    <div class="flex flex-wrap">
-      <div class="grow-0 shrink-0 basis-auto mb-6 md:mb-0 w-full md:w-6/12 px-3 lg:px-6">
-        <h2 class="text-3xl font-bold mb-6">Contact us</h2>
-        <p class="text-gray-500 mb-6">
+  <section  className="mb-32 text-gray-800">
+    <div  className="flex flex-wrap">
+      <div  className="grow-0 shrink-0 basis-auto mb-6 md:mb-0 w-full md:w-6/12 px-3 lg:px-6">
+        <h2  className="text-3xl font-bold mb-6">Contact us</h2>
+        <p  className="text-gray-500 mb-6">
         <ReactMarkdown children={websiteInformations[0]?.contactUs?.markdown} />
         </p>
-        <p class="text-gray-500 mb-4">{websiteInformations[0]?.businessAddress}</p>
-        <p class="text-gray-500 mb-4">{websiteInformations[0]?.phoneNumber?.map((no) => (
+        <p  className="text-gray-500 mb-4">{websiteInformations[0]?.businessAddress}</p>
+        <p  className="text-gray-500 mb-4">{websiteInformations[0]?.phoneNumber?.map((no) => (
             <span key={no}>{no}</span>
           ))}</p>
-        <p class="text-gray-500 mb-2">{websiteInformations[0]?.businessEmail}</p>
+        <p  className="text-gray-500 mb-2">{websiteInformations[0]?.businessEmail}</p>
       </div>
-      <div class="grow-0 shrink-0 basis-auto mb-12 md:mb-0 gap-2 flex md:grid grid-col-2 flex-col w-full md:w-6/12 px-3 lg:px-6">
-      <h2 class="text-3xl font-bold mb-2 md:col-span-2 h-fit">Our Handles</h2>
-      <p class="text-gray-500 mb-2 md:col-span-2">
+      <div  className="grow-0 shrink-0 basis-auto mb-12 md:mb-0 gap-2 flex md:grid grid-col-2 flex-col w-full md:w-6/12 px-3 lg:px-6">
+      <h2  className="text-3xl font-bold mb-2 md:col-span-2 h-fit">Our Handles</h2>
+      <p  className="text-gray-500 mb-2 md:col-span-2">
           Connect with us on all our social media handles, we are online 24/7 and ready to listen to your messages.
         </p>
 

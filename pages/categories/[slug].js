@@ -51,12 +51,12 @@ function Category({categorys,products}) {
 >
   <img src={image.url} width="100%" className="object-cover absolute top-0 left-0 right-0 w-full " />
   <div
-    class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed shop_overlay"
+     className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed shop_overlay"
   >
-    <div class="flex justify-center items-center h-full">
-      <div class="text-white">
-        <h2 class="font-black text-6xl mb-4">{name}</h2>
-        <h4 class="font-semibold text-md px-6 line-clamp-2 md:line-clamp-3 mb-6">{description}</h4>
+    <div  className="flex justify-center items-center h-full">
+      <div  className="text-white">
+        <h2  className="font-black text-6xl mb-4">{name}</h2>
+        <h4  className="font-semibold text-md px-6 line-clamp-2 md:line-clamp-3 mb-6">{description}</h4>
       </div>
     </div>
   </div>

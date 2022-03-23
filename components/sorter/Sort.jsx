@@ -61,6 +61,7 @@ function Sort({setFloors,category,slug, search, setSearch, page}) {
 
   return (
     <div className="flex flex-col md:flex-row place-content-between m-4 gap-1 w-full px-2">
+      
     <Search search={search} setSearch={setSearch}/>
     <div className="md:flex grid md:mt-0 mt-2 grid-cols-2 md:flex-row place-items-center 
     justify-content-right gap-2 flex-wrap overflow-hidden">
