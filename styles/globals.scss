@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,700;1,700&family=Bebas+Neue&family=Butterfly+Kids&family=Estonia&family=Exo:ital,wght@0,900;1,900&family=Josefin+Sans:wght@500&family=Lobster&family=Poppins:ital@0;1&family=Raleway:ital,wght@0,700;0,800;0,900;1,600;1,700;1,800;1,900&display=swap');
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+
+.textShadow {
+    text-shadow: 1px 1px #7572724f;
+}
+
+.transition {
+    transition: all 2s ease-in-out;
+}
+
+.overlay {
+    width: max-content;
+    height: max-content;
+    /* Full width (cover the whole page) */
+    /* Full height (cover the whole page) */
+    background-color: rgba(202, 134, 7, 0.24);
+    /* Black background with opacity */
+    /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+}
+
+#overlay {
+    position: absolute;
+    /* Sit on top of the page content */
+    /* Hidden by default */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(36, 26, 7, 0.4);
+    /* Black background with opacity */
+    /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+    /* Add a pointer on hover */
+}
+
+.my-masonry-grid {
+    display: -webkit-box;
+    /* Not needed if autoprefixing */
+    display: -ms-flexbox;
+    /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: -30px;
+    /* gutter size offset */
+    width: auto;
+}
+
+.my-masonry-grid_column {
+    padding-left: 30px;
+    /* gutter size */
+    background-clip: padding-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif !important;
+    &:before {
+        content: '';
+        content: "";
+        width: 100%;
+        height: 100vh;
+        //background: linear-gradient(to right bottom, #6d327c, #485DA6, #00a1ba, #01b18e, #32b37b);
+        // background: #D3D3D3;
+        background-image: linear-gradient( to bottom, rgba(250, 246, 246, 0.906), rgba(255, 255, 255, 0.938)), url("/img/bg.jpg");
+        position: fixed;
+        backdrop-filter: blur(10px);
+        left: 0;
+        top: 0;
+        z-index: -1;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+
+/* Style your items */
+
+.my-masonry-grid_column>div {
+    /* change div to reference your elements you put in <Masonry> */
+    background: grey;
+    margin-bottom: 30px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f0bf44;
+    width: 100px;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #FBB710;
+    border-radius: 90px;
+    margin: 30px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9e7203;
+}
+
+.hr {
+    height: 500px !important;
+}
+
+.shop_header {
+    background-image: url('../public/img/shop_header.jpg');
+    background-position: 0px -48px;
+    object-fit: cover;
+    background-size: cover;
+    height: 400px;
+}
+
+.terms-condition_header {
+    background-image: linear-gradient( to bottom, rgba(2, 2, 2, 0.606), rgba(0, 0, 0, 0.638)), url("../public/img/terms-condition.jpeg");
+    object-fit: cover;
+    background-size: cover;
+    height: 300px;
+}
+
+.privacy_header {
+    background-image: url('../public/img/privacy_policy.jpg');
+    object-fit: cover;
+    background-size: cover;
+    height: 300px;
+}
+
+.categories_header {
+    background-image: url('../public/img/categories.jpg');
+    object-fit: cover;
+    background-size: cover;
+    height: 300px;
+}
+
+.aboutus_header {
+    background-image: url('../public/img/About-us.png');
+    object-fit: cover;
+    background-size: cover;
+    height: 300px;
+}
+
+@media (max-width:1280px) {
+    .shop_header {
+        background-image: url('../public/img/shop_header.jpg');
+        background-position: 0px 0px;
+        background-size: cover;
+        height: 300px;
+    }
+}
+
+@media (max-width:380px) {
+    .xs_hidden {
+        display: none;
+    }
+}
+
+.shop_overlay {
+    background-color: rgba(0, 0, 0, 0.6)
+}
+
+.bg_pr {
+    background-color: #FBB710 !important;
+}
+
+.bg_pr:hover {
+    background-color: #9e7203 !important;
+}
