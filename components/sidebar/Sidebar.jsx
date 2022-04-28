@@ -35,7 +35,7 @@ function Sidebar({className}) {
     <div className={`${className} border-r-1 shadow-xl border-primary 
     flex flex-col place-content-between h-full container py-6 place-items-center text-center p-4`}>
         <div className="mb-6">
-            <Image src="/img/logo/w.png" alt="Washington Interio Logo"
+            <Image src="/img/logo/w.png" alt="Jessica Online Closet"
              width={100}
              height={80}/>
             <p className="font-black text-lg text-primary textShadow font-body">{websiteInformation?.businessName}</p>
